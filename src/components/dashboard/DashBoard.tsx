@@ -48,7 +48,7 @@ const DashBoard: FC = () => {
   }
 
   return (
-    <div>
+    <div className='dashboard'>
       {element}
     </div>
   )

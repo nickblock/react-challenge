@@ -5,19 +5,12 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .popup-inner {
   background-color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   width: 40%;
 }
 
@@ -123,24 +116,26 @@
 }
 
 .bar {
-  height: 30px;
+  height: 100%;
   background-color: gray;
-
-  padding: "25px 45px 25px 45px";
 }
 
-.data-display {
-  position: absolute;
-  left: 50%;
+.dashboard {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
 }
+
+.dashboard h1 {
+  text-align: center;
+}
+
+.data-display {}
 
 .two-columns {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 1000px;
-  min-height: 100vh;
-  align-items: center;
+  border: 1px solid #ccc;
 }
 
 .firstColumn {
