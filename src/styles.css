@@ -87,3 +87,19 @@
   color: #ffffff;
   cursor: not-allowed;
 }
+
+.data-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-cell {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
