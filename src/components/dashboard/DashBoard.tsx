@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from 'react';
+import DataElementDisplay, { DataElement } from '../data/DataElement';
 
 async function http<T>(
   request: RequestInfo
@@ -10,22 +11,11 @@ async function http<T>(
   return body;
 }
 
-interface DataAttribute {
-  name: string,
-  value: number,
-  unit: string
-}
-// example consuming code
-interface DataElement {
-  title: string,
-  attributes: DataAttribute[]
-}
-
 const dataUrl = "/data.json"
 
 const DashBoard: FC = () => {
 
-  const [data, setData] = useState("No data");
+  const [data, setData] = useState<Array<DataElement>>([]);
 
   useEffect(() => {
     async function getData() {
@@ -36,13 +26,13 @@ const DashBoard: FC = () => {
           dataUrl
         );
 
-        setData(result[0].title);
+        setData(result);
       }
       catch (error) {
         let message
         if (error instanceof Error) message = error.message
         else message = String(error)
-        setData(message)
+        console.log(message)
       }
     }
     getData();
@@ -50,9 +40,14 @@ const DashBoard: FC = () => {
 
 
 
+  let element: any
+  if (data.length) {
+    element = <DataElementDisplay data={data[0]} />
+  }
+
   return (
     <div>
-      DashBoard {data}
+      {element}
     </div>
   )
 }
