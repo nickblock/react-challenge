@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import Table, { Props } from "./Table"
+import BarGraph from './BarGraph';
 import { DataElement } from './DataDef';
+
 
 export type DataElementDisplayProps = {
   data: DataElement
@@ -8,14 +10,15 @@ export type DataElementDisplayProps = {
 
 const DataElementDisplay: FC<DataElementDisplayProps> = (props: DataElementDisplayProps) => {
 
-  const tableProps = {
+  const propsData = {
     data: props.data.attributes
   }
   return (
     <div>
       <h1>{props.data.title}</h1>
 
-      <Table {...tableProps} />
+      <Table {...propsData} />
+      <BarGraph {...propsData} />
 
     </div>
   )

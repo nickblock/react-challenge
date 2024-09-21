@@ -1,13 +1,12 @@
 import { FC, useEffect, useState } from 'react';
-import DataElementDisplay, { DataElement } from '../data/DataElement';
+import DataElementDisplay from '../data/DataElement';
+import { DataElement } from '../data/DataDef';
 
 async function http<T>(
   request: RequestInfo
 ): Promise<T> {
   const response = await fetch(request);
   const body = await response.json();
-
-  console.log(body)
   return body;
 }
 
