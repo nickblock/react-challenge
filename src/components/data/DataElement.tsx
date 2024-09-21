@@ -14,11 +14,13 @@ const DataElementDisplay: FC<DataElementDisplayProps> = (props: DataElementDispl
     data: props.data.attributes
   }
   return (
-    <div>
+    <div className='data-display'>
       <h1>{props.data.title}</h1>
 
-      <Table {...propsData} />
-      <BarGraph {...propsData} />
+      <div className="two-columns">
+        <Table {...propsData} />
+        <BarGraph {...propsData} />
+      </div>
 
     </div>
   )

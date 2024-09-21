@@ -8,6 +8,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import React from 'react';
 
 const columnHelper = createColumnHelper<DataAttribute>();
 
@@ -28,8 +29,12 @@ export type Props = {
 
 const Table: FC<Props> = ({ data }: Props) => {
 
+  const memoData = React.useMemo(() => {
+    return Array.isArray(data) ? data : [];
+  }, [data]);
+
   const table = useReactTable({
-    data: data,
+    data: memoData,
     columns,
     debugTable: true,
     getCoreRowModel: getCoreRowModel()

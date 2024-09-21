@@ -34,7 +34,10 @@ const DashBoard: FC = () => {
         console.log(message)
       }
     }
-    getData();
+    if (data.length == 0) {
+
+      getData();
+    }
   });
 
 
