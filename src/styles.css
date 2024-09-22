@@ -109,19 +109,14 @@
 
 .two-columns {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: 1px solid #ccc;
 }
 
-.firstColumn {
-  min-width: "300px";
-  min-height: "1080px";
-  display: "inline-block";
-}
-
-.secondColumn {
-  width: "1620px";
-  padding: "25px 45px 25px 45px";
+@media (min-width: 500px) {
+  .two-columns {
+    flex-direction: row;
+  }
 }
 
 .slider-container {
