@@ -25,7 +25,7 @@ The threejs challenge is added to the public folder, access:
 
 ## React Challenge Notes
 
-Started from fork of following template:
+Started from a fork of following template:
 
 [https://github.com/divshekhar/react-typescript-template]
 
