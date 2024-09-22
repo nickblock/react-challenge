@@ -1,4 +1,9 @@
-.popup {
+.login-title {
+  text-align: center;
+}
+
+.login-form {
+
   position: fixed;
   z-index: 1;
   left: 0;
@@ -12,6 +17,7 @@
   margin: auto;
   padding: 20px;
   width: 40%;
+  top: 200px
 }
 
 .popup-inner h2 {
