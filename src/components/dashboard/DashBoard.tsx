@@ -1,12 +1,13 @@
 import { FC, useEffect, useState } from 'react';
 import DataElementDisplay from '../data/DataElement';
 import { DataElement } from '../data/DataDef';
+import RangeSlider from "./RangeSlider"
 
 async function http<T>(
   request: RequestInfo
 ): Promise<T> {
-  const response = await fetch(request);
-  const body = await response.json();
+  const response = await fetch(request)
+  const body = await response.json()
   return body;
 }
 
@@ -14,7 +15,8 @@ const dataUrl = "/data.json"
 
 const DashBoard: FC = () => {
 
-  const [data, setData] = useState<Array<DataElement>>([]);
+  const [data, setData] = useState<Array<DataElement>>([])
+  const [item, setItem] = useState(0)
 
   useEffect(() => {
     async function getData() {
@@ -25,7 +27,7 @@ const DashBoard: FC = () => {
           dataUrl
         );
 
-        setData(result);
+        setData(result)
       }
       catch (error) {
         let message
@@ -36,22 +38,31 @@ const DashBoard: FC = () => {
     }
     if (data.length == 0) {
 
-      getData();
+      getData()
     }
   });
 
 
 
-  let element: any
-  if (data.length) {
-    element = <DataElementDisplay data={data[0]} />
+  const rangeProps = {
+    numItems: data.length - 1,
+    setValue: setItem
   }
 
-  return (
-    <div className='dashboard'>
-      {element}
-    </div>
-  )
+  if (data.length) {
+
+    return (
+      <div className='dashboard'>
+        <DataElementDisplay data={data[item]} />
+        <RangeSlider {...rangeProps} />
+      </div>
+    )
+  }
+  else {
+    return (
+      <></>
+    )
+  }
 }
 
 export default DashBoard
