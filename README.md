@@ -1,80 +1,38 @@
-# React-Typescript-Template
 
-<div align="center">
-<img src="./src/assets/images/react-typescript-template.png"/>
-</div>
+# Nick Block react + three.js Challenge!
 
-## Welcome to my React template
 
-This template is built with the following technologies:
 
-- Language: **TypeScript**
-- Styling: **TailwindCSS**
-- Testing: **Jest**
-- Linting: **ESLint**
-- Formatting: **Prettier**
-- Bundling: **Webpack**
-- Transpiling: **Babel**
-- Lint Staged: **Husky**
-- **React Refresh**
-- **Development** & **Production** configurations
-- Declarations for **png** and **svg** files
-  
-## Getting Started
+## Build and Run 
 
-Using this template is very simple, follow the following instructions:
+To build and run the React challenge you must have npm installed
 
-1. Fork the repository
-2. Create a new repository and select forked repository as template
+```npm start```
 
-Or,
 
-1. Clone the repository
+Opens in browser
 
-```bash
-git clone https://github.com/divshekhar/react-typescript-template.git
-```
+```http://localhost:8080```
 
-2. Install the dependencies
 
-```bash
-npm install
-```
+## Three JS
 
-3. Start the development server
+The threejs challenge is added to the public folder, access:
 
-```bash
-npm start
-```
+```http://localhost:8080/three.html```
 
-4. Build for production
 
-```bash
-npm run build
-```
 
-## Features
+## React Challenge Notes
 
-- [x] TypeScript for improved code quality and developer experience
-- [x] TailwindCSS for responsive styling
-- [x] Jest for unit testing
-- [x] ESLint for linting and maintaining code consistency
-- [x] Prettier for automatic code formatting
-- [x] Webpack for bundling and building the application
-- [x] Babel for transpiling modern JavaScript to older versions for better browser compatibility
-- [x] Husky for running lint-staged, which lints and fixes files before committing
-- [x] React Refresh for faster development experience
-- [x] Development & Production configurations for different environment settings
-- [x] Declarations for png and svg for improved developer experience
+Started from fork of following template:
 
-## Contributing
+[https://github.com/divshekhar/react-typescript-template]
 
-Please feel free to contribute to this project by submitting issues or pull requests.
+Bar chart:
 
-## License
+[https://gist.github.com/saarw/8a99b684595f4f7e0095abd7b6b8d8b9]
 
-This project is licensed under the ISC License.
+Table:
 
-## Acknowledgements
-
-Thank you for using this template. I hope it helps you build your next project with ease.
+[https://github.com/monsterlessonsacademy/monsterlessonsacademy/blob/431-tanstack-table-react/src/usersTable/UsersTable.tsx]
