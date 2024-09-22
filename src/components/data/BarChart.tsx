@@ -17,7 +17,7 @@ interface BarChartProps<T> {
 
 }
 
-function BarGraph<T>(props: BarChartProps<T>) {
+function BarChart<T>(props: BarChartProps<T>) {
   const max = useMemo(() => {
     return props.values.reduce((prev, curr) => {
       const c = props.yValueFn(curr);
@@ -167,4 +167,4 @@ function BarGraph<T>(props: BarChartProps<T>) {
   );
 }
 
-export default BarGraph;
+export default BarChart;

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Table, { Props } from "./Table"
-import BarGraph from './BarGraph';
+import BarChart from './BarChart';
 import { DataElement, DataAttribute } from './DataDef';
 
 
@@ -10,11 +10,11 @@ export type DataElementDisplayProps = {
 
 const DataElementDisplay: FC<DataElementDisplayProps> = (props: DataElementDisplayProps) => {
 
-  const propsData = {
+  const tableData = {
     data: props.data.attributes
   }
 
-  const barGraphData = {
+  const barChartData = {
     values: props.data.attributes,
     yValueFn: (value: DataAttribute) => {
       return value.value
@@ -28,8 +28,8 @@ const DataElementDisplay: FC<DataElementDisplayProps> = (props: DataElementDispl
       <h1>{props.data.title}</h1>
 
       <div className="two-columns">
-        <Table {...propsData} />
-        <BarGraph<DataAttribute> {...barGraphData} />
+        <Table {...tableData} />
+        <BarChart<DataAttribute> {...barChartData} />
       </div>
 
     </div>
